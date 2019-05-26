@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { TextInput, Button, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -7,6 +9,11 @@ class Home extends Component {
             textInput: ''
         };
     }
+    static navigationOptions = {
+        tabBarIcon:()=>{
+            return <Icon name='home' size={20} color="#fff" />;
+        }
+    };
     render() {
         return (
             <View>
